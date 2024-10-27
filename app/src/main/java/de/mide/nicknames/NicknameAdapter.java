@@ -22,6 +22,7 @@ public class NicknameAdapter extends RecyclerView.Adapter {
     /** Cursor für Ergebnis von Datenbank-Abfrage, die alle Nicknames liefert. */
     private Cursor _cursor = null;
 
+
     /**
      * Konstruktor.
      *
@@ -66,7 +67,12 @@ public class NicknameAdapter extends RecyclerView.Adapter {
 
         if ( holder instanceof NicknameViewHolder nicknameHolder ) {
 
-            _cursor.moveToPosition(position);
+            boolean erfolg = _cursor.moveToPosition(position);
+            if ( !erfolg ) {
+
+                Log.w( TAG4LOGGING, "Ungültige Cursor-Position: " + position );
+                return;
+            }
 
             final String adjektiv   = _cursor.getString(0);
             final String substantiv = _cursor.getString(1);
@@ -89,6 +95,10 @@ public class NicknameAdapter extends RecyclerView.Adapter {
     @Override
     public int getItemCount() {
 
-        return _cursor.getCount();
+        final int anzahlZeilen = _cursor.getCount();
+
+        Log.i( TAG4LOGGING, "Anzahl Zeilen: " + anzahlZeilen );
+
+        return anzahlZeilen;
     }
 }
