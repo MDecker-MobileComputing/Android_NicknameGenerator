@@ -35,7 +35,7 @@ public class DatenbankManager extends SQLiteOpenHelper {
      * Diese Methode verwendet mehrzeilige String-Literale; hierfür musste die
      * Java-Version in der Datei app/build.gradle von 1.8 auf 17 erhöht werden.
      *
-     * @param db Datenbank
+     * @param db Referenz auf Datenbank-API
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -52,7 +52,7 @@ public class DatenbankManager extends SQLiteOpenHelper {
 
             final String createSql2 =
                     """
-                        CREATE TABLE SUBSTANTIVE (                        
+                        CREATE TABLE SUBSTANTIVE (
                               substantiv_id INTEGER PRIMARY KEY,
                               substantiv    TEXT    NOT NULL
                         )
