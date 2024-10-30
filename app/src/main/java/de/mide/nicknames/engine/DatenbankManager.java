@@ -66,9 +66,9 @@ public class DatenbankManager extends SQLiteOpenHelper {
                     """
                       INSERT INTO ADJEKTIVE (adjektiv) VALUES
                             ("Awesome"), ("Brave"), ("Clever"), ("Daring"), ("Eager"), ("Fantastic"),
-                            ("Gentle"), ("Happy"), ("Intelligent"), ("Jolly"), ("Kind"), ("Lively"), 
-                            ("Magnificent"), ("Nice"), ("Optimistic"), ("Pleasant"), ("Quirky"), 
-                            ("Radiant"), ("Silly"), ("Thoughtful"), ("Unique"), ("Vibrant"), ("Witty"), 
+                            ("Gentle"), ("Happy"), ("Intelligent"), ("Jolly"), ("Kind"), ("Lively"),
+                            ("Magnificent"), ("Nice"), ("Optimistic"), ("Pleasant"), ("Quirky"),
+                            ("Radiant"), ("Silly"), ("Thoughtful"), ("Unique"), ("Vibrant"), ("Witty"),
                             ("Xenial"), ("Youthful"), ("Zealous")
                     """;
 
@@ -76,9 +76,9 @@ public class DatenbankManager extends SQLiteOpenHelper {
                     """
                         INSERT INTO SUBSTANTIVE (substantiv) VALUES
                                ("Ant"), ("Bear"), ("Cat"), ("Dog"), ("Elephant"), ("Frog"), ("Giraffe"),
-                               ("Horse"), ("Iguana"), ("Jaguar"), ("Kangaroo"), ("Lion"), ("Monkey"), 
-                               ("Narwhal"), ("Owl"), ("Penguin"), ("Quokka"), ("Rabbit"), ("Snake"), 
-                               ("Turtle"), ("Unicorn"), ("Vulture"), ("Whale"), 
+                               ("Horse"), ("Iguana"), ("Jaguar"), ("Kangaroo"), ("Lion"), ("Monkey"),
+                               ("Narwhal"), ("Owl"), ("Penguin"), ("Quokka"), ("Rabbit"), ("Snake"),
+                               ("Turtle"), ("Unicorn"), ("Vulture"), ("Whale"),
                                ("Xylophone"), ("Yak"), ("Zebra")
                     """;
 
