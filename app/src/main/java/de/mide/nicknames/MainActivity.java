@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import de.mide.nicknames.engine.DatenbankManager;
+import de.mide.nicknames.engine.NicknameAdapter;
+
 
 /**
  * Activity für die Anzeige der Nicknames in einem {@code RecyclerView}.

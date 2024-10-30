@@ -1,4 +1,4 @@
-package de.mide.nicknames;
+package de.mide.nicknames.engine;
 
 import android.content.Context;
 import android.database.Cursor;

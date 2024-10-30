@@ -1,4 +1,4 @@
-package de.mide.nicknames;
+package de.mide.nicknames.engine;
 
 
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import de.mide.nicknames.R;
 
 
 /**
