@@ -106,8 +106,6 @@ public class NicknameAdapter extends RecyclerView.Adapter {
 
         final int anzahlZeilen = _cursor.getCount();
 
-        Log.i( TAG4LOGGING, "Anzahl Zeilen: " + anzahlZeilen );
-
         return anzahlZeilen;
     }
 

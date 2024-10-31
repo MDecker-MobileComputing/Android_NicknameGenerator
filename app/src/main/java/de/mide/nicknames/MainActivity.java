@@ -56,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
      */
     private void recyclerViewInitialisieren() {
 
-        final DatenbankManager dbManager = new DatenbankManager(this);
-
         final RecyclerView recyclerView = findViewById( R.id.nicknameRecyclerView );
         recyclerView.setLayoutManager( new LinearLayoutManager(this) );
 
+        final DatenbankManager dbManager = new DatenbankManager(this);
         final Cursor cursor = dbManager.holeNicknames();
+
         final NicknameAdapter adapter = new NicknameAdapter(cursor);
         recyclerView.setAdapter( adapter );
     }
