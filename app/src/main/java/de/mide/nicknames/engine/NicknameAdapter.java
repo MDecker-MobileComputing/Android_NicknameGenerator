@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -82,6 +83,12 @@ public class NicknameAdapter extends RecyclerView.Adapter {
             final String nickname = adjektiv + " " + substantiv;
             nicknameHolder.setNickname(nickname);
 
+            nicknameHolder.itemView.setOnClickListener( view -> {
+
+                Toast.makeText( view.getContext(),
+                           "Nickname: " + nickname, Toast.LENGTH_SHORT).show();
+            });
+
         } else {
 
             Log.w(TAG4LOGGING, "Ungültiger ViewHolder-Typ: " + holder.getClass().getName());
@@ -103,4 +110,5 @@ public class NicknameAdapter extends RecyclerView.Adapter {
 
         return anzahlZeilen;
     }
+
 }
