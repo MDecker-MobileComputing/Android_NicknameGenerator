@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
      * Lifecycle-Methode, lädt Layout-Datei, initialisiert RecyclerView und Actionbar.
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate( Bundle savedInstanceState ) {
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_main );
 
         actionbarInitialisieren();
         recyclerViewInitialisieren();
@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
     private void actionbarInitialisieren() {
 
         final ActionBar actionBar = getSupportActionBar();
-        if (actionBar == null) {
+        if ( actionBar == null ) {
 
-            Log.w(TAG4LOGGING, "Keine ActionBar gefunden.");
+            Log.w( TAG4LOGGING, "Keine ActionBar gefunden." );
             return;
         }
 
-        actionBar.setTitle(R.string.app_name);
+        actionBar.setTitle( R.string.app_name );
     }
 
 
@@ -59,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
         final RecyclerView recyclerView = findViewById( R.id.nicknameRecyclerView );
         recyclerView.setLayoutManager( new LinearLayoutManager(this) );
 
-        final DatenbankManager dbManager = new DatenbankManager(this);
+        final DatenbankManager dbManager = new DatenbankManager( this );
         final Cursor cursor = dbManager.holeNicknames();
 
-        final NicknameAdapter adapter = new NicknameAdapter(cursor);
+        final NicknameAdapter adapter = new NicknameAdapter( cursor );
         recyclerView.setAdapter( adapter );
     }
 
